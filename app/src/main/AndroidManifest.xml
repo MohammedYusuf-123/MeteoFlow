@@ -10,12 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/meteoflow_play_store_icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MeteoFlow"
-        tools:targetApi="31">
+        android:theme="@style/Theme.MeteoFlow">
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.MeteoFlow">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

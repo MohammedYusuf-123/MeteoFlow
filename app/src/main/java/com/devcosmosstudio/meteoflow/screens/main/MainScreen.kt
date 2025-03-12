@@ -6,8 +6,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 
 @Composable
-fun MainScreen(navController: NavController){
+fun MainScreen(navController: NavController) {
     Surface {
-        Text(text = "Hello from Main Screen")
+        Text(text = "Hello there i see you came to main screen")
     }
 }

@@ -8,6 +8,6 @@ import androidx.navigation.NavController
 @Composable
 fun MainScreen(navController: NavController) {
     Surface {
-        Text(text = "Hello there i see you came to main screen")
+        Text(text = "Hello there I see you came to main screen")
     }
 }

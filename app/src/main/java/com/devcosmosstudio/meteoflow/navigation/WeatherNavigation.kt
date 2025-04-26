@@ -1,10 +1,12 @@
 package com.devcosmosstudio.meteoflow.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.devcosmosstudio.meteoflow.screens.main.MainScreen
+import com.devcosmosstudio.meteoflow.screens.main.MainViewModel
 import com.devcosmosstudio.meteoflow.screens.splash.WeatherSplashScreen
 
 @Composable
@@ -15,7 +17,8 @@ fun WeatherNavigation() {
             WeatherSplashScreen(navController = navController)
         }
         composable(WeatherScreens.MainScreen.name){
-            MainScreen(navController = navController)
+            val mainViewModel = hiltViewModel<MainViewModel>()
+            MainScreen(navController = navController, mainViewModel)
         }
     }
 }

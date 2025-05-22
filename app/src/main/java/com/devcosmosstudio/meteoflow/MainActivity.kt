@@ -6,11 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeContent
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -34,13 +30,13 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun WeatherApp() {
     MeteoFlowTheme {
-        Scaffold(
+        /*Scaffold(
             modifier = Modifier.fillMaxSize(),
             contentWindowInsets = WindowInsets.safeContent
-        ) { innerPadding ->
+        ) { innerPadding ->*/
             Surface(
                 modifier = Modifier
-                    .padding(innerPadding)
+                    //.padding(innerPadding)
                     .fillMaxSize()
             ) {
                 Column(
@@ -50,7 +46,7 @@ fun WeatherApp() {
                     WeatherNavigation()
                 }
             }
-        }
+        //}
     }
 }
 

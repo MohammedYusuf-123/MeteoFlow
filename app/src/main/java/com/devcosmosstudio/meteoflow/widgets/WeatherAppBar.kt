@@ -1,10 +1,13 @@
 package com.devcosmosstudio.meteoflow.widgets
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -65,9 +68,22 @@ fun WeatherAppBar(
                             contentDescription = "Vertical Menu"
                         )
                     }
+                } else {
+                    Box {}
                 }
             },
-            navigationIcon = {},
+            navigationIcon = {
+                if (icon != null) {
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSecondary,
+                        modifier = Modifier.clickable{
+                            onButtonClicked.invoke()
+                        }
+                    )
+                }
+            },
             colors = TopAppBarDefaults.topAppBarColors(Color.Transparent)
         )
     }
